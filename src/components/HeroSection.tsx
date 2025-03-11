@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Zap, Bot, Workflow } from 'lucide-react';
+import { Zap, Bot, GitBranch, Network } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -59,10 +59,60 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-automation-purple/20 to-automation-blue/20"></div>
               
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 relative">
-                  <div className="absolute w-full h-full flex items-center justify-center">
-                    <Workflow className="w-24 h-24 text-automation-blue-light opacity-90" />
+                <div className="w-72 h-72 relative">
+                  {/* Central AI Node */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-automation-purple rounded-full flex items-center justify-center z-10 shadow-lg shadow-automation-purple/50">
+                    <Bot className="w-10 h-10 text-white" />
                   </div>
+                  
+                  {/* Branch Connections */}
+                  <div className="absolute inset-0">
+                    {/* Top branch */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-28 bg-gradient-to-b from-automation-blue to-automation-purple"></div>
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-automation-blue rounded-full flex items-center justify-center">
+                      <GitBranch className="w-5 h-5 text-white" />
+                    </div>
+                    
+                    {/* Bottom branch */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-28 bg-gradient-to-t from-automation-blue to-automation-purple"></div>
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-automation-blue rounded-full flex items-center justify-center">
+                      <GitBranch className="w-5 h-5 text-white" />
+                    </div>
+                    
+                    {/* Left branch */}
+                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 h-2 w-28 bg-gradient-to-r from-automation-blue to-automation-purple"></div>
+                    <div className="absolute left-2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-automation-blue rounded-full flex items-center justify-center">
+                      <Network className="w-5 h-5 text-white" />
+                    </div>
+                    
+                    {/* Right branch */}
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 h-2 w-28 bg-gradient-to-l from-automation-blue to-automation-purple"></div>
+                    <div className="absolute right-2 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-10 h-10 bg-automation-blue rounded-full flex items-center justify-center">
+                      <Network className="w-5 h-5 text-white" />
+                    </div>
+                    
+                    {/* Diagonal branches */}
+                    <div className="absolute top-14 left-14 transform -translate-x-1/2 -translate-y-1/2 w-2 h-28 bg-gradient-to-b from-automation-blue to-automation-purple rotate-45"></div>
+                    <div className="absolute top-14 right-14 transform translate-x-1/2 -translate-y-1/2 w-2 h-28 bg-gradient-to-b from-automation-blue to-automation-purple -rotate-45"></div>
+                    <div className="absolute bottom-14 left-14 transform -translate-x-1/2 translate-y-1/2 w-2 h-28 bg-gradient-to-t from-automation-blue to-automation-purple -rotate-45"></div>
+                    <div className="absolute bottom-14 right-14 transform translate-x-1/2 translate-y-1/2 w-2 h-28 bg-gradient-to-t from-automation-blue to-automation-purple rotate-45"></div>
+                    
+                    {/* Additional connection nodes */}
+                    <div className="absolute top-10 left-10 w-8 h-8 bg-automation-blue/80 rounded-full flex items-center justify-center">
+                      <GitBranch className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="absolute top-10 right-10 w-8 h-8 bg-automation-blue/80 rounded-full flex items-center justify-center">
+                      <Network className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="absolute bottom-10 left-10 w-8 h-8 bg-automation-blue/80 rounded-full flex items-center justify-center">
+                      <Network className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="absolute bottom-10 right-10 w-8 h-8 bg-automation-blue/80 rounded-full flex items-center justify-center">
+                      <GitBranch className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                  
+                  {/* Animated glowing effects */}
                   <div className="absolute top-0 left-0 w-16 h-16 bg-automation-purple/20 rounded-full blur-xl animate-pulse"></div>
                   <div className="absolute bottom-0 right-0 w-20 h-20 bg-automation-blue/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
                 </div>
