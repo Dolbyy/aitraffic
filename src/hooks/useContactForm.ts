@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -69,14 +68,14 @@ export const useContactForm = () => {
 
   const saveToSupabase = async (data: FormData) => {
     try {
-      const phoneNumber = Number(data.phone.replace(/\D/g, ''));
+      const phoneNumber = data.phone.replace(/\D/g, '');
       
       const { error } = await supabase
         .from('User Info')
         .insert({
           name: data.name,
-          email_id: data.email,
-          phone_no: phoneNumber
+          email: data.email,
+          phone: phoneNumber
         });
       
       if (error) {
