@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -43,7 +42,6 @@ const ContactSection = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
@@ -74,15 +72,15 @@ const ContactSection = () => {
 
   const saveToSupabase = async (data: FormData) => {
     try {
+      const phoneNumber = Number(data.phone.replace(/\D/g, ''));
+      
       const { error } = await supabase
         .from('User Info')
-        .insert([
-          { 
-            name: data.name,
-            email_id: data.email,
-            phone_no: data.phone.replace(/\s+/g, '')
-          }
-        ]);
+        .insert({
+          name: data.name,
+          email_id: data.email,
+          phone_no: phoneNumber
+        });
       
       if (error) {
         console.error('Error saving to Supabase:', error);
@@ -106,21 +104,17 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Save to Supabase
       await saveToSupabase(formData);
       
-      // Show success toast
       toast({
         title: "Message Sent!",
         description: "We've received your information and will contact you shortly.",
       });
       
-      // Reset form
       setFormData({ name: '', email: '', phone: '' });
     } catch (error) {
       console.error('Submission error:', error);
       
-      // Show error toast
       toast({
         title: "Submission Failed",
         description: "There was an error sending your message. Please try again.",
