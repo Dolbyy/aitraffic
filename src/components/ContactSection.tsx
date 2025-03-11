@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, User, Send } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 type FormData = {
   name: string;
@@ -71,7 +72,31 @@ const ContactSection = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const saveToSupabase = async (data: FormData) => {
+    try {
+      const { error } = await supabase
+        .from('User Info')
+        .insert([
+          { 
+            name: data.name,
+            email_id: data.email,
+            phone_no: data.phone.replace(/\s+/g, '')
+          }
+        ]);
+      
+      if (error) {
+        console.error('Error saving to Supabase:', error);
+        throw new Error(error.message);
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Error in saveToSupabase:', error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -80,9 +105,9 @@ const ContactSection = () => {
     
     setIsSubmitting(true);
     
-    // Simulate API call - in a real app, this would be your n8n webhook endpoint
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      // Save to Supabase
+      await saveToSupabase(formData);
       
       // Show success toast
       toast({
@@ -92,8 +117,18 @@ const ContactSection = () => {
       
       // Reset form
       setFormData({ name: '', email: '', phone: '' });
+    } catch (error) {
+      console.error('Submission error:', error);
+      
+      // Show error toast
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
