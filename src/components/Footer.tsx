@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-white font-bold text-sm">FA</span>
             </div>
             <p className="text-gray-400">
-              © {currentYear} FastrAI.com. All rights reserved.
+              © {currentYear} FastrAI.com All rights reserved.
             </p>
           </div>
           
