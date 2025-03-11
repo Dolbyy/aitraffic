@@ -37,7 +37,7 @@ const Header = () => {
           <div className="w-10 h-10 mr-3 rounded-lg bg-gradient-to-br from-automation-purple to-automation-blue flex items-center justify-center">
             <span className="text-white font-bold text-lg">VJ</span>
           </div>
-          <h1 className="text-xl font-bold text-white">Venkataprasanth J</h1>
+          <h1 className="text-xl font-bold text-white">FastrAI.com</h1>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
