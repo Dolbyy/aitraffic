@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <div className="w-8 h-8 mr-2 rounded-lg bg-gradient-to-br from-automation-purple to-automation-blue flex items-center justify-center">
-              <span className="text-white font-bold text-sm">VJ</span>
+              <span className="text-white font-bold text-sm">FA</span>
             </div>
             <p className="text-gray-400">
               © {currentYear} FastrAI.com. All rights reserved.
