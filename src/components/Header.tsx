@@ -35,9 +35,9 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <div className="w-10 h-10 mr-3 rounded-lg bg-gradient-to-br from-automation-purple to-automation-blue flex items-center justify-center">
-            <span className="text-white font-bold text-lg">FA</span>
+            <span className="text-white font-bold text-lg">AT</span>
           </div>
-          <h1 className="text-xl font-bold text-white">FastrAI</h1>
+          <h1 className="text-xl font-bold text-white">AI Traffic</h1>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
