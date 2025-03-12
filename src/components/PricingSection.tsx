@@ -7,7 +7,7 @@ const pricingPlans = [
   {
     name: "Simple Chat Bot Automation",
     subtitle: "RAG Method",
-    price: "₹1-2 Lakhs",
+    price: "Essentials",
     description: "Perfect for businesses looking to automate basic customer interactions",
     features: [
       "Custom chatbot with your business knowledge",
@@ -21,7 +21,7 @@ const pricingPlans = [
   {
     name: "Intermediate Level Automation",
     subtitle: "Business Process Optimization",
-    price: "₹5-7 Lakhs",
+    price: "Growth",
     description: "Comprehensive automation for growing businesses with complex needs",
     features: [
       "Advanced workflow automation with n8n",
@@ -37,7 +37,7 @@ const pricingPlans = [
   {
     name: "Enterprise Level Automation",
     subtitle: "End-to-End Solution",
-    price: "₹12-15+ Lakhs",
+    price: "Enterprise",
     description: "Completely customizable based on required modules and features",
     features: [
       "Full enterprise system integration",
@@ -66,10 +66,10 @@ const PricingSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Simple, Transparent Pricing
+            Custom Automation Solutions
           </h2>
           <p className="text-xl text-gray-300">
-            Choose the perfect automation package for your business needs
+            Discover tailored AI services designed to transform your business.
           </p>
         </div>
         

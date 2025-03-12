@@ -1,12 +1,17 @@
 
 import React from 'react';
-import { Zap, Mail, Bot, Database, Calendar, Users, MessageSquare, LineChart } from 'lucide-react';
+import { Zap, Mail, Bot, Database, Calendar, Users, MessageCircle, LineChart } from 'lucide-react';
 
 const serviceItems = [
   {
     icon: <Mail className="w-6 h-6 text-automation-purple-light" />,
     title: "Email Automation",
     description: "Fully customized email workflows to nurture leads and engage customers automatically."
+  },
+  {
+    icon: <MessageCircle className="w-6 h-6 text-automation-blue-light" />,
+    title: "Whatsapp Automation",
+    description: "Connect your social channels to automatically engage with mentions and messages."
   },
   {
     icon: <Bot className="w-6 h-6 text-automation-blue-light" />,
@@ -29,11 +34,6 @@ const serviceItems = [
     description: "Automatically capture, qualify and route leads to the right teams without manual work."
   },
   {
-    icon: <MessageSquare className="w-6 h-6 text-automation-blue-light" />,
-    title: "Social Media Integration",
-    description: "Connect your social channels to automatically engage with mentions and messages."
-  },
-  {
     icon: <LineChart className="w-6 h-6 text-automation-purple-light" />,
     title: "Reporting Automation",
     description: "Generate and deliver custom reports automatically to stakeholders on schedule."
@@ -51,10 +51,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            What I Can Do For You
+            What We Can Do For You
           </h2>
           <p className="text-xl text-gray-300">
-            As an AI Agent & Automation Developer, I leverage <span className="font-medium text-automation-purple-light">n8n</span> to create fully automated, 
+            As an AI Agent & Automation Company, We leverage <span className="font-medium text-automation-purple-light">n8n</span> to create fully automated, 
             tailored solutions that solve real business problems and save you countless hours.
           </p>
         </div>

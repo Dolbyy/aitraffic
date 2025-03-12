@@ -30,11 +30,11 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              I can <span className="text-gradient">automate anything</span> for your business
+              We can <span className="text-gradient">automate anything</span> for your business
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-lg">
-              Just bring your problem – I solve it. Unlock efficiency and scale your operations with custom automation solutions.
+              Just bring your problem – We solve it. Unlock efficiency and scale your operations with custom automation solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

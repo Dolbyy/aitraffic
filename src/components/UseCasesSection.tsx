@@ -42,7 +42,7 @@ const UseCasesSection = () => {
           <div className="mt-12 p-6 glass-card rounded-xl bg-gradient-to-r from-automation-purple/10 to-automation-blue/10">
             <p className="text-xl font-medium text-center">
               "If you're spending hours on repetitive tasks, manually transferring data, or struggling to keep up with customer inquiries, 
-              there's a better way. These are exactly the problems I solve every day."
+              there's a better way. These are exactly the problems We Solve every day."
             </p>
           </div>
         </div>
