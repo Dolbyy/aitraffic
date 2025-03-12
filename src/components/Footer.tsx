@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-white font-bold text-sm">FA</span>
             </div>
             <p className="text-gray-400">
-              © {currentYear} aitraffic.com. All rights reserved.
+              © {currentYear} aitraffic.in. All rights reserved.
             </p>
           </div>
           
