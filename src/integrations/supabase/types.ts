@@ -30,27 +30,42 @@ export type Database = {
         }
         Relationships: []
       }
+      n8n_chat_histories_fastrai: {
+        Row: {
+          id: number
+          message: Json
+          session_id: string
+        }
+        Insert: {
+          id?: number
+          message: Json
+          session_id: string
+        }
+        Update: {
+          id?: number
+          message?: Json
+          session_id?: string
+        }
+        Relationships: []
+      }
       "User Info": {
         Row: {
           created_at: string
-          email_id: string | null
-          id: number
+          email: string | null
           name: string | null
-          phone_no: number | null
+          phone: string | null
         }
         Insert: {
           created_at?: string
-          email_id?: string | null
-          id?: number
+          email?: string | null
           name?: string | null
-          phone_no?: number | null
+          phone?: string | null
         }
         Update: {
           created_at?: string
-          email_id?: string | null
-          id?: number
+          email?: string | null
           name?: string | null
-          phone_no?: number | null
+          phone?: string | null
         }
         Relationships: []
       }

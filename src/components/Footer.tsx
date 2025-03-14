@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,10 +10,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <div className="w-8 h-8 mr-2 rounded-lg bg-gradient-to-br from-automation-purple to-automation-blue flex items-center justify-center">
-              <span className="text-white font-bold text-sm">FA</span>
-            </div>
-            <p className="text-gray-400">
+            <Link to="/" className="flex items-center">
+              <img src="/FastrAI.svg" alt="AI Traffic Logo" className="h-8 w-8 mr-2" />
+              <span className="text-white font-semibold">AI Traffic</span>
+            </Link>
+            <p className="text-gray-400 ml-2">
               © {currentYear} aitraffic.in. All rights reserved.
             </p>
           </div>
@@ -21,6 +23,7 @@ const Footer = () => {
             <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
             <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Use Cases</a>
             <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a>
+            <Link to="/blogs" className="text-gray-400 hover:text-white transition-colors">Blogs</Link>
             <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
           </div>
         </div>
