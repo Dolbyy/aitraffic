@@ -20,9 +20,9 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-6">
-            <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link>
-            <Link to="/use-cases" className="text-gray-400 hover:text-white transition-colors">Use Cases</Link>
-            <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link>
+            <Link to="/#services" className="text-gray-400 hover:text-white transition-colors">Services</Link>
+            <Link to="/#use-cases" className="text-gray-400 hover:text-white transition-colors">Use Cases</Link>
+            <Link to="/#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link>
             <Link to="/blogs" className="text-gray-400 hover:text-white transition-colors">Blogs</Link>
             <Link to="/#contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
           </div>

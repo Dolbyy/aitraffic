@@ -53,9 +53,9 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-6">
           <nav>
             <ul className="flex space-x-8">
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="/use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link to="/#services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/#use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</Link></li>
+              <li><Link to="/#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
               <li>
                 <Link to="/blogs" className="text-gray-300 hover:text-white transition-colors">
                   Blogs
