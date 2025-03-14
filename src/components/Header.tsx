@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   // Handle scroll effect for header
   useEffect(() => {
@@ -33,14 +35,14 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img 
             src="/FastrAI.svg" 
             alt="FastrAI Logo"
             className="h-10 w-10 mr-2"
           />
           <h1 className="text-xl font-bold text-white">AI Traffic</h1>
-        </div>
+        </Link>
         
         <div className="hidden md:flex items-center space-x-6">
           <nav>
@@ -48,6 +50,15 @@ const Header = () => {
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
               <li><a href="#use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</a></li>
               <li><a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
+              <li>
+                <Button 
+                  variant="link"
+                  className="text-gray-300 hover:text-white p-0 transition-colors"
+                  onClick={() => navigate('/blogs')}
+                >
+                  Blogs
+                </Button>
+              </li>
             </ul>
           </nav>
           <Button 
@@ -58,12 +69,21 @@ const Header = () => {
           </Button>
         </div>
         
-        <Button 
-          onClick={scrollToContact}
-          className="md:hidden bg-gradient-to-r from-automation-purple to-automation-blue hover:opacity-90 transition-opacity"
-        >
-          Contact
-        </Button>
+        <div className="md:hidden flex items-center space-x-4">
+          <Button 
+            variant="link"
+            className="text-gray-300 hover:text-white p-0 transition-colors"
+            onClick={() => navigate('/blogs')}
+          >
+            Blogs
+          </Button>
+          <Button 
+            onClick={scrollToContact}
+            className="bg-gradient-to-r from-automation-purple to-automation-blue hover:opacity-90 transition-opacity"
+          >
+            Contact
+          </Button>
+        </div>
       </div>
     </header>
   );

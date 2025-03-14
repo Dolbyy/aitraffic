@@ -35,7 +35,7 @@ const BlogDetailPage = () => {
     <div className="min-h-screen bg-automation-dark text-white">
       <Header />
       <main>
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-24">
           <div className="mb-8">
             <Button variant="ghost" asChild className="mb-6">
               <Link to="/blogs" className="flex items-center">
@@ -62,8 +62,11 @@ const BlogDetailPage = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{blog.title}</h1>
           </div>
           
-          <div className="prose prose-invert prose-lg max-w-3xl mx-auto">
-            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+          <div className="prose prose-invert prose-lg max-w-4xl mx-auto">
+            <div 
+              dangerouslySetInnerHTML={{ __html: blog.content }} 
+              className="prose-headings:text-automation-purple-light prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-li:marker:text-automation-purple-light prose-li:my-1 prose-ul:my-4 prose-p:mb-4"
+            />
           </div>
         </div>
       </main>
