@@ -51,13 +51,9 @@ const Header = () => {
               <li><a href="#use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</a></li>
               <li><a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
               <li>
-                <Button 
-                  variant="link"
-                  className="text-gray-300 hover:text-white p-0 transition-colors"
-                  onClick={() => navigate('/blogs')}
-                >
+                <Link to="/blogs" className="text-gray-300 hover:text-white transition-colors">
                   Blogs
-                </Button>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -70,13 +66,9 @@ const Header = () => {
         </div>
         
         <div className="md:hidden flex items-center space-x-4">
-          <Button 
-            variant="link"
-            className="text-gray-300 hover:text-white p-0 transition-colors"
-            onClick={() => navigate('/blogs')}
-          >
+          <Link to="/blogs" className="text-gray-300 hover:text-white transition-colors">
             Blogs
-          </Button>
+          </Link>
           <Button 
             onClick={scrollToContact}
             className="bg-gradient-to-r from-automation-purple to-automation-blue hover:opacity-90 transition-opacity"
