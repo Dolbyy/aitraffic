@@ -22,9 +22,15 @@ const Header = () => {
   }, []);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    if (window.location.pathname === '/') {
+      // If on homepage, scroll to contact section
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, navigate to home and then to contact section
+      navigate('/#contact');
     }
   };
 
@@ -47,9 +53,9 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-6">
           <nav>
             <ul className="flex space-x-8">
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</a></li>
-              <li><a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/use-cases" className="text-gray-300 hover:text-white transition-colors">Use Cases</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
               <li>
                 <Link to="/blogs" className="text-gray-300 hover:text-white transition-colors">
                   Blogs

@@ -59,13 +59,13 @@ const BlogDetailPage = () => {
               <span className="text-gray-400">By {blog.author}</span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{blog.title}</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-automation-purple-light to-automation-blue-light bg-clip-text text-transparent">{blog.title}</h1>
           </div>
           
           <div className="prose prose-invert prose-lg max-w-4xl mx-auto">
             <div 
               dangerouslySetInnerHTML={{ __html: blog.content }} 
-              className="prose-headings:text-automation-purple-light prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-li:marker:text-automation-purple-light prose-li:my-1 prose-ul:my-4 prose-p:mb-4"
+              className="prose-headings:text-automation-purple-light prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3 prose-li:marker:text-automation-purple-light prose-li:my-1 prose-ul:my-4 prose-p:mb-4 prose-p:leading-relaxed"
             />
           </div>
         </div>
